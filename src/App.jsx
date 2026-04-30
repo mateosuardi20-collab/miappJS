@@ -37,11 +37,11 @@ function App() {
 
   const { ingresos, gastos, balance } = calcularTotales()
   const balanceEsPositivo = Number(balance) >= 0
-
+  
   return (
     <>
       <nav className="menu">
-        <ul className="container mt-3">
+        <ul className="container">
           <li>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -51,16 +51,16 @@ function App() {
           </li>
           <li>
             <button
-              onClick={scrollToContacto}
+              onClick={scrollTobalance}
             >
-              Contacto
+              Balance
             </button>
           </li>
           <li>
             <button
-              onClick={scrollTobalance}
+              onClick={scrollToContacto}
             >
-              Balance
+              Contacto
             </button>
           </li>
         </ul>
@@ -81,7 +81,7 @@ function App() {
         </div>
         <div ref={contactoRef} className="container mt-4 seccion-card panel-card p-4">
           <h1 className="titulo-contacto">Contacto</h1>
-          <p>Si tienes alguna pregunta, no dudes en contactarme.</p>
+          <p>Si tenés alguna pregunta, no dudes en contactarme.</p>
           <p>Email: mateosuardi20@gmail.com</p>
           <p>Teléfono: +54 9 3562 512754</p>
         </div>
